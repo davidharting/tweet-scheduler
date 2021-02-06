@@ -34,3 +34,10 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+###
+# VScode extensions
+###
+
+# Default file created using sqltools extension when connecting to a db
+Container database.session.sql

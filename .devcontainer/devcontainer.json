@@ -22,7 +22,17 @@
 				"previewLimit": 50,
 				"server": "localhost",
 				"port": 5432,
-				"database": "postgres",
+				"database": "tweet-scheduler_dev",
+				"username": "postgres",
+				"password": "postgres"
+			},
+			{
+				"name": "Container database",
+				"driver": "PostgreSQL",
+				"previewLimit": 50,
+				"server": "localhost",
+				"port": 5432,
+				"database": "tweet-scheduler_test",
 				"username": "postgres",
 				"password": "postgres"
 			}
