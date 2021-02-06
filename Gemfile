@@ -54,3 +54,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+###
+
+# Was unable to run tests because rexml is no longer included
+# See https://github.com/Shopify/bootsnap/issues/325
+gem 'rexml' 
