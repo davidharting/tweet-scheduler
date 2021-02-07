@@ -6,6 +6,7 @@ COPY ./Gemfile /usr/src/Gemfile
 RUN bundle install --gemfile=/usr/src/Gemfile
 RUN rails db:create
 RUN rails db:migrate
+RUN rails db:test:prepare
 
 # Node setup
 ARG NODE_VERSION="lts/*"
