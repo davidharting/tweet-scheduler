@@ -5,4 +5,5 @@ class User < ApplicationRecord
   # This also provides virtual fields: "password" and "confirm_password"
   # on top of our real password_digest column
   has_secure_password
+  validates :email, presence: true
 end
