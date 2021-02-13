@@ -17,6 +17,8 @@ Rails
 
   get "password/reset", to: "password_resets#new"
   post "password/reset", to: "password_resets#create"
+  get "password/reset/edit", to: "password_resets#edit"
+  patch "password/reset/edit", to: "password_resets#update"
 
   get "signin", to: "sessions#new"
   post "signin", to: "sessions#create"

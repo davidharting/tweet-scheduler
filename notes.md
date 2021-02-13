@@ -36,3 +36,10 @@ I added both of these to devcontainer.json
 # 16. Logging out
 
 - Use `button_to` for logout. It will generate a form around the button. Links should not result in a delete!
+
+# 20. Reset passwork token mailer
+
+- Rails has [`globalid`](https://github.com/rails/globalid) feature that will allow us to generate expiring, single-use tokens without creating database records. (It is for more than this use case but will allow us to do this).
+  - Models respond to `to_global_id` to get an identifier that can be used to retrieve the model. (Try `User.first.to_global_id.to_s` in the console)
+  - You can generated a signed version of the global id. ActiveModels respond to [`signed_id`](https://blog.saeloun.com/2020/05/20/rails-6-1-adds-support-for-signed-ids-to-active-record.html), which can take a hash with things like `expires_at`, `purpose`, and other arbitrary data.
+- Finally learned the difference between `some_path` and `some_url` helpers. The `_url` version is fully qualified. So creating a link inside an email is a good use case. When linking within the app to the app, `_path` helpers are preferred.

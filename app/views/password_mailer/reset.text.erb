@@ -1,3 +1,10 @@
-Password#reset
+Hello,
 
-<%= @greeting %>, find me in app/views/password_mailer/reset.text.erb
+Someone requested a password reset for the Cronbird account associated with <%= @user.email %>.
+
+If this was you, please click the link below to reset your password. Otherwise, ignore this email.
+
+This unique link must be used within <%= @expiry %>.
+
+<%= link_to "Reset your password by clicking this link", password_reset_edit_url(token: @token) %>
+
