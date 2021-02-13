@@ -27,3 +27,8 @@ I added both of these to devcontainer.json
 # 14. Handling sign up errors
 
 - I've always struggled with how strong params work but now I see it is quite simple. `registrations_controller#user_params` is a nice simple example.
+
+# 15. Login with session cookie
+
+- Rails has built-in support for session and signed cookies
+- Session cookies can be set server-side but are tamper-proof client-side
