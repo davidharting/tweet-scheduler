@@ -8,4 +8,7 @@ Rails
   # I like "show" here, reserving index for list views. But idk 🤷‍♀️
   root to: "home#show" # get "/" also works instead of the root helper
   get "about", to: "about#index"
+
+  get "signup", to: "registrations#new"
+  post "signup", to: "registrations#create"
 end
