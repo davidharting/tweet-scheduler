@@ -12,6 +12,9 @@ Rails
   get "signup", to: "registrations#new"
   post "signup", to: "registrations#create"
 
+  get "password", to: "passwords#edit", as: :edit_password
+  patch "password", to: "passwords#update"
+
   get "signin", to: "sessions#new"
   post "signin", to: "sessions#create"
   delete "signout", to: "sessions#destroy"
