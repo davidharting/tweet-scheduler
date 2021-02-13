@@ -32,3 +32,7 @@ I added both of these to devcontainer.json
 
 - Rails has built-in support for session and signed cookies
 - Session cookies can be set server-side but are tamper-proof client-side
+
+# 16. Logging out
+
+- Use `button_to` for logout. It will generate a form around the button. Links should not result in a delete!

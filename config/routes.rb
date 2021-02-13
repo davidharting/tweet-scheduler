@@ -11,4 +11,5 @@ Rails
 
   get "signup", to: "registrations#new"
   post "signup", to: "registrations#create"
+  delete "signout", to: "sessions#destroy"
 end
