@@ -43,3 +43,7 @@ I added both of these to devcontainer.json
   - Models respond to `to_global_id` to get an identifier that can be used to retrieve the model. (Try `User.first.to_global_id.to_s` in the console)
   - You can generated a signed version of the global id. ActiveModels respond to [`signed_id`](https://blog.saeloun.com/2020/05/20/rails-6-1-adds-support-for-signed-ids-to-active-record.html), which can take a hash with things like `expires_at`, `purpose`, and other arbitrary data.
 - Finally learned the difference between `some_path` and `some_url` helpers. The `_url` version is fully qualified. So creating a link inside an email is a good use case. When linking within the app to the app, `_path` helpers are preferred.
+
+# 22. Password reset update
+
+- You can drop `binding.irb` in your code to get a debugger that will drop you into an interactive session
