@@ -1,9 +1,14 @@
 class OmniauthCallbacksController < ApplicationController
   def twitter
     details = get_twitter_account_from_hash
+    Rails.logger.info(details)
     twitter_account = Current.user.twitter_accounts.where(username: details[:username]).first_or_initialize
-    twitter_account.update(details)
-    redirect_to root_path, notice: "Succesfully connected your account"
+    if twitter_account.update(details)
+      redirect_to twitter_accounts_path, notice: "Succesfully connected your account"
+    else
+      puts(twitter_account.errors.full_messages)
+      redirect_to twitter_accounts_path, alert: "Unable to connect your account"
+    end
   end
 
   def get_twitter_account_from_hash

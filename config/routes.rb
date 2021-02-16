@@ -25,4 +25,6 @@ Rails
   delete "signout", to: "sessions#destroy"
 
   get "auth/twitter/callback", to: "omniauth_callbacks#twitter"
+
+  resources :twitter_accounts
 end

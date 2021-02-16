@@ -12,6 +12,9 @@
         <li class="nav-item">
           <a class="nav-link" href="<%= about_path %>">About</a>
         </li>
+        <li class="nav-item">
+          <%= link_to "Twitter accounts", twitter_accounts_path, class: "nav-link" %>
+        </li>
       </ul>
 
        <% if Current.user %>

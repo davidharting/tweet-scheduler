@@ -47,3 +47,8 @@ I added both of these to devcontainer.json
 # 22. Password reset update
 
 - You can drop `binding.irb` in your code to get a debugger that will drop you into an interactive session
+
+# 27. Twitter accounts page
+
+- `link_to` and `button_to` helpers can take an active record instance as their second argument. They will figure out the correct URL for it from there. Does this only work when using `resources` in `routes.rb`?
+- I thought I could achieve this same thing with `twitter_accounts_path(twitter_account)`. However, that generated `/twitter-accounts.3`, with a period instead of a slash. Not sure what I was doing wrong there.
