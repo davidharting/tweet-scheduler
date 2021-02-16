@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :twitter_accounts
+
   # Rails provides has_secure_password
   # https://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html#method-i-has_secure_password
   # This will take care of validations, bcrypt, and  many other things

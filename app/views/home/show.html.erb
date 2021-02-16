@@ -2,7 +2,9 @@
 
 <% if Current.user %>
   You are logged in as <%= Current.user.email %>.
-  <%= button_to "Connect twitter", "/auth/twitter", method: :post, class: "btn btn-primary" %>
+  <% if @show_connect_twitter %>
+    <%= button_to "Connect twitter", "/auth/twitter", method: :post, class: "btn btn-primary" %>
+  <% end %>
 <% else %>
   <%= link_to "Sign up", signup_path, class: "btn btn-primary w-100" %>
   <%= link_to "Already a member? Sign in", signin_path, class: "btn btn-link" %>
