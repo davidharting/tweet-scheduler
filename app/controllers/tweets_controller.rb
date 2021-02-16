@@ -13,7 +13,14 @@ class TweetsController < ApplicationController
 
   def create
     puts(tweet_params)
-    redirect_to new_tweet_path, alert: "Create not implemented"
+    @tweet = Current.user.tweets.new(tweet_params)
+    if @tweet.save
+      redirect_to tweets_path, notice: "Tweet was scheduled succesfully"
+    else
+      # I think I am getting an error because when I render new here,
+      @twitter_accounts = Current.user.twitter_accounts
+      render :new
+    end
   end
 
   private
