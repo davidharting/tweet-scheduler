@@ -56,3 +56,7 @@ I added both of these to devcontainer.json
 # 31. Tweet partial
 
 - Rails has a localization helper, which you can simply invoke to with `l`. You can use this to localize a date.
+
+# 32. Edit and destroy tweets
+
+- I am realizing why you would render versus redirect_to from within a controller. If you have errors on an object that you want to be available after the submit, then you render. This lets you control the state available to the template from within the particular controller. If you don't need state to carry over, then redirect. So because of this, redirect_to should be the default to avoid creating unnecessary dependencies on data in controllers that are not directly related to a view. In other words - create will likely render to new on an error. Update will likely render to edit on an error. Beyond that, try not to do this!
