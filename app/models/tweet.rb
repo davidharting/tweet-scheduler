@@ -9,4 +9,9 @@ class Tweet < ApplicationRecord
   after_initialize do
     self.publish_at ||= 24.hours.from_now # Set if not already initialized
   end
+
+  def published?
+    # Rails provides these boolean helper methods that check if the field has a vlaue
+    tweet_id?
+  end
 end

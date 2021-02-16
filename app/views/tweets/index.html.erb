@@ -7,10 +7,6 @@
   <% end %>
 </div>
 
-<ul>
-  <% @tweets.each do |t| %>
-    <li>
-      <%= t.body %>
-    </li>
-  <% end %>
-</ul>
+
+<!-- Rails looks for a views/tweets/_tweet partial to render each of these tweet instances -->
+<%= render @tweets %>

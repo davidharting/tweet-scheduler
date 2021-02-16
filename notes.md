@@ -52,3 +52,7 @@ I added both of these to devcontainer.json
 
 - `link_to` and `button_to` helpers can take an active record instance as their second argument. They will figure out the correct URL for it from there. Does this only work when using `resources` in `routes.rb`?
 - I thought I could achieve this same thing with `twitter_accounts_path(twitter_account)`. However, that generated `/twitter-accounts.3`, with a period instead of a slash. Not sure what I was doing wrong there.
+
+# 31. Tweet partial
+
+- Rails has a localization helper, which you can simply invoke to with `l`. You can use this to localize a date.
