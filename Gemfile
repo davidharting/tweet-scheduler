@@ -69,3 +69,6 @@ gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 # Was unable to run tests because rexml is no longer included
 # See https://github.com/Shopify/bootsnap/issues/325
 gem "rexml"
+
+gem "omniauth-twitter", "~> 1.4"
+gem "omniauth-rails_csrf_protection", "~> 1.0"

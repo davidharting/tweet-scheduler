@@ -23,4 +23,6 @@ Rails
   get "signin", to: "sessions#new"
   post "signin", to: "sessions#create"
   delete "signout", to: "sessions#destroy"
+
+  get "auth/twitter/callback", to: "omniauth_callbacks#twitter"
 end
