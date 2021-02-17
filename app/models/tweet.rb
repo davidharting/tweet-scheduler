@@ -14,4 +14,9 @@ class Tweet < ApplicationRecord
     # Rails provides these boolean helper methods that check if the field has a vlaue
     tweet_id?
   end
+
+  def publish_to_twitter!
+    response = twitter_account.send_tweet!(body)
+    update(tweet_id: response.id)
+  end
 end
