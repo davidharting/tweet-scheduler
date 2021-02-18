@@ -16,7 +16,6 @@ class TweetsController < ApplicationController
   end
 
   def update
-    schedule_new_job? = @tweet.publish_at != tweet_params[:publish_at]
     if @tweet.update(tweet_params)
       redirect_to tweets_path, notice: "Successfully updated tweet"
     else
