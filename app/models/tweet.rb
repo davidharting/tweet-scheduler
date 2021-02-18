@@ -10,6 +10,12 @@ class Tweet < ApplicationRecord
     self.publish_at ||= 24.hours.from_now # Set if not already initialized
   end
 
+  def after_save_commit
+    if publish_at_previously_changed?
+      SendTweetJob.set(wait_until: publish_at).perform_later(id)
+    end
+  end
+
   def published?
     # Rails provides these boolean helper methods that check if the field has a vlaue
     tweet_id?
