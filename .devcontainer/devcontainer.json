@@ -40,18 +40,18 @@
   },
   // Add the IDs of extensions you want installed when the container is created.
   "extensions": [
-	"rebornix.Ruby",
-	"mtxr.sqltools",
-	"mtxr.sqltools-driver-pg",
-	"bung87.rails",
-	"bung87.vscode-gemfile",
-	"aliariff.vscode-erb-beautify",
-	"jnbt.vscode-rufo"
-],
+    "rebornix.Ruby",
+    "mtxr.sqltools",
+    "mtxr.sqltools-driver-pg",
+    "bung87.rails",
+    "bung87.vscode-gemfile",
+    "aliariff.vscode-erb-beautify",
+    "jnbt.vscode-rufo"
+  ],
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],
   // Use 'postCreateCommand' to run commands after the container is created.
-  // "postCreateCommand": "ruby --version",
+  "postCreateCommand": "bash ./.devcontainer/post-create.sh",
   // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
   "remoteUser": "vscode"
 }
