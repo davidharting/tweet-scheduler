@@ -3,6 +3,7 @@ class SendTweetJob < ApplicationJob
 
   def perform(tweet_id)
     tweet = Tweet.find_by(id: tweet_id)
+
     if tweet.nil?
       Rails.logger.info("Skipping job, could not find tweet with id #{tweet_id}")
       return false
