@@ -42,3 +42,5 @@ yarn-debug.log*
 # Default file created using sqltools extension when connecting to a db
 Container database.session.sql
 /config/credentials/development.key
+
+/config/credentials/production.key
