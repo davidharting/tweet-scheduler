@@ -64,3 +64,8 @@ I added both of these to devcontainer.json
 # 36. Using sidekiq
 
 - `binding.irb` and `byebug` are both available to stop a process and get access to variables at that point
+
+# 37. Deplyoing to heroku
+
+- Have to remember to encrypt production credentials so that those are available to rails runtime
+- Give heroku access to the encryption key by adding the `RAILS_MASTER_KEY` environment variable to the config vars
